@@ -136,10 +136,13 @@ h1{
   text-shadow:0 1px 8px rgba(255,100,155,0.4);opacity:.9;text-align:center;padding:0 20px;
 }
 #bq{
-  position:relative;width:min(86vw,380px,calc(60vh*.713));aspect-ratio:460/645;
+  position:relative;
+  width:min(94vw,440px,calc(75vh*.713));
+  aspect-ratio:460/645;
   transform:translateY(40px) scale(.92);
   transition:transform 2.2s cubic-bezier(.2,.8,.2,1),opacity 1.2s ease,filter 1.2s ease;
-  cursor:pointer;touch-action:none;
+  cursor:pointer;
+  touch-action:none;
 }
 #wrap.show #bq{transform:none}
 #bq::before{
@@ -597,7 +600,16 @@ function unlock(){
 /* ---- bouquet ---- */
 const BQ_BG = "images/bouquet-bg.png";
 const BQ_IMG = "images/bouquet.png";
-const SPOTS = [[185,98,38],[312,95,36],[175,205,46],[327,185,46],[240,152,30],[258,215,32],[105,155,44],[248,98,24]];
+const SPOTS = [
+  [185,98,44],
+  [312,95,42],
+  [175,205,54],
+  [327,185,54],
+  [240,152,36],
+  [258,215,38],
+  [105,155,52],
+  [248,98,30]
+];
 const W = 460, H = 645, cv = $('#cv'), cx = cv.getContext('2d'), img = new Image();
 const bg = new Image(), cb = $('#cvb').getContext('2d');
 bg.onload = () => cb.drawImage(bg, 0, 0); bg.src = BQ_BG;
